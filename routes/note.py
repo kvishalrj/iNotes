@@ -28,5 +28,5 @@ async def create_item(request: Request):
     if formDict["title"]=="" or formDict["desc"]=="":
         return {"success": False}
     else: 
-        note = conn.vmdb.vmnotes.insert_one(formDict) 
+        conn.vmdb.vmnotes.insert_one(formDict) 
         return {"success": True}
